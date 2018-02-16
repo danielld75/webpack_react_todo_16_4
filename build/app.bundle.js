@@ -8088,7 +8088,7 @@ exports = module.exports = __webpack_require__(35)(false);
 
 
 // module
-exports.push([module.i, "._2xo2biYT1s9XQmHhT2Utv5 {\n    background-color: #F5F5F5;\n    color: #222;\n    display: flex;\n    flex-direction: column;\n    flex-wrap: nowrap;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    width: 100vw;\n    height: 100vh;\n}", ""]);
+exports.push([module.i, "._2xo2biYT1s9XQmHhT2Utv5 {\n    background-color: #F5F5F5;\n    color: #222;\n    display: flex;\n    flex-direction: column;\n    flex-wrap: nowrap;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    width: 100vw;\n    height: 100vh;\n}\nbody {\n    margin: 0;\n}", ""]);
 
 // exports
 exports.locals = {
