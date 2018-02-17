@@ -1,9 +1,9 @@
 import React from 'react';
 
 const TodoList = props => {
-  const dataList = this.props.dataLists.map(data => {
+  const dataList = props.dataLists.map(data => {
     return (
-      <li onClick={this.removeTodo(data.id)} key={data.id}>{data.text}</li>
+      <li onClick={() => data.removeTodo(data.id)} key={data.id}>{data.text}</li>
     )
   });
   return <ul>{dataList}</ul>

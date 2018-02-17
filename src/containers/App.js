@@ -2,7 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
-import TodoList from '../components/Todo';
+import TodoList from '../components/TodoList';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class App extends React.Component {
           <p>Ilość zadań: {this.state.data.length}</p>
         </div>
         <div>
-          <TodoList props = {this.state.data}/>
+          <TodoList dataLists={this.state.data}/>
         </div>
       </div>
     );
