@@ -2,12 +2,22 @@ import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
+import TodoList from '../components/Todo';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [{
+        id: 1,
+        text: 'clean room'
+      }, {
+        id: 2,
+        text: 'wash the dishes'
+      }, {
+        id: 3,
+        text: 'feed my cat'
+      }]
     };
   }
 
@@ -27,9 +37,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.TodoApp}>
-        <Title title="Todo Application" />
-        <p>Ilość zadań: {this.state.data.length}</p>
+      <div>
+        <div className={style.TodoApp}>
+          <Title title="Todo Application"/>
+          <p>Ilość zadań: {this.state.data.length}</p>
+        </div>
+        <div>
+          <TodoList props = {this.state.data}/>
+        </div>
       </div>
     );
   }

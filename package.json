@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack",
+    "start:dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,9 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.11.1",
+    "optimize-js-plugin": "0.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "style-loader": "^0.20.1",
