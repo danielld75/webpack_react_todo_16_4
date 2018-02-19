@@ -1,12 +1,13 @@
 import React from 'react';
+import style from './TodoList.css'
 
 const TodoList = props => {
   const dataList = props.dataLists.map(data => {
     return (
-      <li onClick={() => data.removeTodo(data.id)} key={data.id}>{data.text}</li>
+      <li onClick={() => props.removeTodo(data.id)} key={data.id} className={style.item}>{data.text}</li>
     )
   });
-  return <ul>{dataList}</ul>
+  return <ul className={style.todoList}>{dataList}</ul>
 };
 
 export default TodoList;
