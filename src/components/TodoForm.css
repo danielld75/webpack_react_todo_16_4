@@ -1,0 +1,17 @@
+.todoForm {
+    height: 50px;
+    font-size: 1.5rem;
+    color: #222222;
+    border: 1px solid lightsteelblue;
+    padding: 20px;
+}
+.todoForm input::placeholder {
+    background-color: antiquewhite;
+}
+.todoForm input[type='submit'] {
+    box-shadow: 1px 1px 3px blue;
+    font-size: 1.5rem;
+}
+.todoForm input {
+    font-size: .9rem;
+}

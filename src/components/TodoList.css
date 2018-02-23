@@ -8,6 +8,8 @@
     list-style: none;
     padding: 6px;
     width: 300px;
+    text-shadow: 1px 1px #222222;
+    color: darkred;
 }
 .item:hover {
     background-color: #9763E6;

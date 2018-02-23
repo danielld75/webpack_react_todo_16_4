@@ -22,13 +22,15 @@ class App extends React.Component {
     };
   }
 
-  addTodo(val) {
-    const todo = {
-      text: val,
-      id: uuid.v4()
-    };
-    const data = [...this.data, todo];
-    this.setState({data});
+  addTodo() {
+    if (this.state.value !== '') {
+      const todo = {
+        text: this.state.value,
+        id: uuid.v4()
+      };
+      const data = [...this.state.data, todo];
+      this.setState({data, value: ""});
+    }
   }
 
   removeTodo(id) {
@@ -36,12 +38,22 @@ class App extends React.Component {
     this.setState({data: remainder});
   }
 
+  updateValue(e) {
+    this.setState({value: e.target.value});
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <div>
         <div className={style.TodoApp}>
           <Title title="Todo Application"/>
           <p>Ilość zadań: {this.state.data.length}</p>
+          <TodoForm handleSubmit={this.handleSubmit.bind(this)} addTodo={this.addTodo.bind(this)}
+                    updateValue={this.updateValue.bind(this)} value={this.state.value}/>
           <TodoList dataLists={this.state.data} removeTodo={this.removeTodo.bind(this)}/>
         </div>
       </div>
