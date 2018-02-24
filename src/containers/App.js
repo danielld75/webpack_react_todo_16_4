@@ -18,7 +18,8 @@ class App extends React.Component {
       }, {
         id: 3,
         text: 'feed my cat'
-      }]
+      }],
+      value: ''
     };
   }
 
